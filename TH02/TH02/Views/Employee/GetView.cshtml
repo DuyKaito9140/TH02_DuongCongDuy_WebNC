@@ -1,0 +1,28 @@
+﻿@model List<TH02.Models.Employee>
+@{
+    ViewBag.Title = "GetView";
+}
+<h3></h3>
+<h1>GETEMPLOYEE</h1>
+<a href="#">Create New</a>
+<table border="1">
+    <tr>
+        <th style="text-align: center">FirstName</th>
+        <th style="text-align: center">LastName</th>
+        <th style="text-align: center">Salary</th>
+        <th style="text-align: center">Function</th>
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="width: 150px; text-align: center">@item.FirstName</td>
+            <td style="width: 150px; text-align: center">@item.LastName</td>
+            <td style="background-color: @item.SalaryColor; width: 150px; text-align: center">@item.Salary $</td>
+            <td style="text-align:center; width: 300px"><a href="#">Edit</a> &#124 <a href="#">Detail</a> &#124 <a href="#">Delete</a></td>
+        </tr>
+    }
+</table>
+
+<a href="~/Product/GetProduct" class="btn btn-success" >BÀI TẬP 3</a>
